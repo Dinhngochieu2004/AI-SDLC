@@ -134,7 +134,7 @@ jobs:
       pull-requests: read
     if: (github.event_name == 'pull_request' || github.event_name == 'pull_request_target')
     steps:
-      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 #v6.1.1
+      - uses: amannn/action-semantic-pull-request@2252a14e810aa9b85c2d560bd7070c802206ecf6 #v6.1.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -160,7 +160,7 @@ jobs:
       pull-requests: write
     if: github.event_name == 'pull_request_target'
     steps:
-      - uses: actions/labeler@f27b608878404679385c85cfa523b85ccb86e213 # v6.1.0
+      - uses: actions/labeler@bf12e9b00b37c5c0ca2b87b79b2daf7891dbda13 # v7.0.0
         with:
           sync-labels: true
 
